@@ -1,6 +1,6 @@
 # 2143-OOP-troester
 
-![Self Image](2dwpQAXA.jpg)
+![Self Image](https://pbs.twimg.com/profile_images/676801385405538304/M8hgumGw_400x400.jpg)
 
 Name: Cameron Troester
 
