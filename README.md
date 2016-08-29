@@ -1,6 +1,6 @@
 # 2143-OOP-troester
 
-![Self Image](selfimage.jpg)
+![Self Image](maxresdefault.jpg)
 
 Name: Cameron Troester
 
