@@ -1,11 +1,8 @@
 # 2143-OOP-troester
 
-![Self Image](file:///C:/Users/Bob/Desktop/selfimage.jpg)
+![Self Image](<blockquote class="imgur-embed-pub" lang="en" data-id="a/eOqKC"><a href="//imgur.com/eOqKC"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 
-git add selfimage.jpg
-git commit -m 'file:///C:/Users/Bob/Desktop/selfimage.jpg'
-git remote add origin https://github.com/selfimage.git
-git push -u origin master
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/eOqKC"><a href="//imgur.com/eOqKC"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 Name: Cameron Troester
 
