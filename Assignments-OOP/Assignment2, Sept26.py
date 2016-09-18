@@ -63,7 +63,7 @@ class fraction(object):
             return "%d %d/%d" % (counter, tempnum, tempdem)
 
 if __name__ == '__main__':
-    a = fraction(1,0)
-    b = fraction(10,4)
+    a = fraction(1,2)
+    b = fraction(3,4)
     c = a + b
     print(c)
