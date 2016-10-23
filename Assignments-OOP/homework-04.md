@@ -179,3 +179,52 @@ f.baz = lambda val: val * val
 print(f.garply())
 # prints what ?
 ```
+### Answer 2
+
+```python
+class Foo(object):
+    def __init__(self, a):
+        self.a = a
+    def garply(self):
+        return self.baz(self.a)
+        
+class Bar(Foo):
+    a = 1
+    def baz(self, val):
+        return val
+        
+f = Foo(4)
+b = Bar(3)
+print(f.a)
+# prints what ?
+
+# Prints out the number 4
+
+print(b.a)
+# prints what ?
+
+# Prints out the number 3
+
+print(f.garply())
+# prints what ?
+
+#Errors from no attribute
+
+print(b.garply())
+# prints what ?
+
+# Prints out the number 3
+
+b.a = 9
+print(b.garply())
+# prints what ?
+
+# Prints out the number 9
+
+f.baz = lambda val: val * val
+print(f.garply())
+# prints what ?
+
+# Prints out the number 16
+
+```
