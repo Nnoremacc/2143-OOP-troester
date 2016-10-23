@@ -1,3 +1,5 @@
+#Cameron Troester
+
 import random
 import abc
 
@@ -82,12 +84,9 @@ class Player(object):
     @Returns: None
     """
     def AddOpponents(self,opponent):
-        if not type(opponent) == list and not opponent.Name == self.Name:
-            self.Opponents[opponent.Name] = opponent
-        else:
-            for op in opponent:
-                if not op.Name == self.Name:
-                    self.Opponents[op.Name] = op
+        for op in opponent:
+            if not op.Name == self.Name:
+                self.Opponents[op.Name] = op
 
     """
     @Method: __str__
@@ -136,9 +135,9 @@ class Player(object):
         int: max rolls 
     @Returns: int: total
     """
-    def Roll(self):
+    def Roll(self,targetscore):
         if self.Strategy == 'Random':
-            Score,NumRolls = self.RandomRoll()
+            Score,NumRolls = self.RandomRoll(targetscore)
         elif self.Strategy == 'Aggressive':
             pass
         elif self.Strategy == 'Cautious':
@@ -153,16 +152,20 @@ class Player(object):
         self.LastNumRolls = NumRolls
         
         
-    def RandomRoll(self):
-        Score = 0
+    def RandomRoll(self,targetscore):
+        Score = 0                    
         NumRolls = 0
         for i in range(random.randint(1,7)):
-            NumRolls += 1
-            roll = self.pig.Roll()
-            if roll == 0:
+            if (self.TotalScore < targetscore):
+                NumRolls += 1              
+                roll = self.pig.Roll()
+                if roll == 0:
+                    break
+                self.TotalScore += roll
+            if(self.TotalScore >targetscore):
+                print(self.Name + " has reached " +str(targetscore) + " making them the winner!")
+                
                 break
-            Score += roll
-        
         return (Score,NumRolls)
 
             
@@ -252,8 +255,8 @@ class Game(object):
         while not self.WinnerExists():
             print(self)
             for name,PlayerObj in self.Players.items():
-                PlayerObj.Roll()
-       
+                 PlayerObj.Roll(self.TargetScore)
+                                                
     """
     @Method: WinnerExists
     @Description: Checks to see if a player has acheived the target score.
@@ -284,7 +287,6 @@ class Game(object):
     @Returns: None
     """   
     def UpdatePlayerOpponents(self):
-
         for name,PlayerObj in self.Players.items():
             PlayerObj.AddOpponents(self.Players.values())
 
