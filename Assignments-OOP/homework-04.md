@@ -1,4 +1,5 @@
-# Ineritance
+# Inheritance
+### Cameron Troester
 
 ### Questions
 
