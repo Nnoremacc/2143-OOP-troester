@@ -1,6 +1,9 @@
 #Cameron Troester
 
-#The simulation created shows that the Aggressive Strat is by far the best for winning.
+#The simulation created shows that the 
+#Aggressive Strat is by far the best for winning.
+#That plus "Sprint to the Finish" although that is not so much
+#a strat but an alternative
 
 import random
 import abc
@@ -353,6 +356,11 @@ class Game(object):
 		
 
 def main():
+
+#The simulation created shows that the 
+#Aggressive Strat is by far the best for winning.
+#That plus "Sprint to the Finish" although that is not so much
+#a strat but an alternative
 
 	for i in range(0, 100):
 		p1 = Player('ann', 1, ('Aggressive', 9))
