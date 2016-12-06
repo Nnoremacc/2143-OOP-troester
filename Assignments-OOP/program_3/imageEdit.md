@@ -2,8 +2,7 @@
 ###Date: December 6th, 2016
 ###Class: OOP-Progrm 3
 ###Description: imageEdit.py contains the bulk of the program, including functions
-###that will edit a photo, copy the edit and then save the copy, incase you wish to 
-###do multiple functions to a single photo
+###that will edit a photo and return it to you
 
 ```python
 from PIL import Image
@@ -11,7 +10,6 @@ import random
 
 #given to us in class example code, even though it's highly ineffective
 #so please don't blur more than 5
-
 def blur(img,blur_power=5):
 	width = img.size[0]
 	height = img.size[1]
@@ -40,7 +38,6 @@ def blur(img,blur_power=5):
 #to the level of intense that you wish (with a default of 200)
 #and depending on where the color lies to the intense value, it will
 #either add or subtract the intense value
-
 def solarize(image, intense = 200):
 	height = image.size[1]
 	width = image.size[0]
@@ -75,7 +72,6 @@ def solarize(image, intense = 200):
 	
 #posterize takes the image and your snap value (with a default of 64)
 #it rounds each RGB value of the pixel to it's closest snap value
-
 def posterize(image, levels = 64):
 
 	width = image.size[0]
@@ -115,7 +111,6 @@ def posterize(image, levels = 64):
 	return image2
 
 #flip will take the photo and flip it horizontally
-
 def flip (image):
 	
 	width = image.size[0]
@@ -134,7 +129,6 @@ def flip (image):
 	
 #takes the image and changes the color of certain pixels a
 #certain distance away (default set to 5) to give a glass look
-
 def glass_effect (image, distance = 5):
 		
 	width = image.size[0]
@@ -161,7 +155,6 @@ def glass_effect (image, distance = 5):
 	return image2
 	
 #with a default set to 64, this gives the photo a warhol type effect
-
 def warhol(image, snap = 64):
 
 	width = image.size[0]
