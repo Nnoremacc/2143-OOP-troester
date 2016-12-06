@@ -1,36 +1,55 @@
+#Name: Cameron Troester
+#Date: December 6th, 2016
+#Class: OOP-Progrm 3
+#Description: main.py is where I grab the photo and run the many functions on it
+
+
 import imageEdit
 from PIL import Image
+import sys
 
 	
+#Main function that will ask the user for a filename
+#attempt to load the file, and then run all functions on 
+#copies of the photo, so each one is independent.
 if __name__ == "__main__":
 	
-	img = Image.open("flower.jpg")
+	filename = input("Name of file you want to open: ")
+	
+	try:
+		img = Image.open(filename)
+	except:
+		print("Could not find filename, exiting")
+		sys.exit()
 	
 	img2 = img.copy()
+	img3 = img.copy()
+	img4 = img.copy()
+	img5 = img.copy()
+	img6 = img.copy()
 	
 	img2.save('copy.jpg')
-	#img = imageEdit.blur(img)
 	
-	#img.save('blurtest.jpg')
+	img = imageEdit.blur(img)
 	
-	#img = imageEdit.flip(img)
+	img.save('blurtest.jpg')
 	
-	#img.save('fliptest.jpg')
+	img2 = imageEdit.flip(img2)
 	
-	#img = imageEdit.flip(img)
+	img2.save('fliptest.jpg')
 	
-	#img = imageEdit.glass_effect(img)
+	img3 = imageEdit.glass_effect(img3)
 	
-	#img.save('glasstest.jpg')
+	img3.save('glasstest.jpg')
 	
-	#img = imageEdit.posterize(img)
+	img4 = imageEdit.posterize(img4)
 	
-	#img.save('postertest.jpg')
+	img4.save('postertest.jpg')
 	
-	img = imageEdit.warhol(img)
+	img5 = imageEdit.warhol(img5)
 	
-	img.save('wartest.jpg')
+	img5.save('wartest.jpg')
 	
-	#img = imageEdit.solarize(img)
+	img6 = imageEdit.solarize(img6)
 	
-	#img.save('solartest.jpg')
+	img6.save('solartest.jpg')
