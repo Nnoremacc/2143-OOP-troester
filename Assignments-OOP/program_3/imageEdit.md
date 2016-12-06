@@ -1,8 +1,7 @@
 #Name: Cameron Troester
 ###Date: December 6th, 2016
 ###Class: OOP-Progrm 3
-###Description: imageEdit.py contains the bulk of the program, including functions
-###that will edit a photo and return it to you
+###Description: imageEdit.py contains the bulk of the program, including functions that will edit a photo and return it to you
 
 ```python
 from PIL import Image
